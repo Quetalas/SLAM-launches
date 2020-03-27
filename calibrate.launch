@@ -1,0 +1,8 @@
+<launch>
+	<include file="./my_cam.launch" />
+	<group ns="my_stereo">
+
+		<node  pkg="side_x_side_stereo" type="side_x_side_stereo_node" name="sxs_stereo">
+		</node>
+	</group>
+</launch>
