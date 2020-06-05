@@ -1,0 +1,13 @@
+sudo chmod o+w /dev/bus/usb/002/003
+
+
+rosrun image_view image_view image:=
+
+
+rosrun tf view_frames && evince frames.pdf
+
+
+rosrun tf tf_echo map base_link
+
+
+rosrun camera_calibration cameracalibrator.py --approximate 0.1 --size 9x6 --square 0.108 right:=/sxs_stereo/right/image_raw left:=/sxs_stereo/left/image_raw right_camera:=/sxs_stereo/right left_camera:=/sxs_stereo/left

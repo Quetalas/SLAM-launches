@@ -1,13 +1,4 @@
 <launch>
-	<include file="./my_cam.launch" />
-	<group ns="my_stereo">
-
-		<node  pkg="side_x_side_stereo" type="side_x_side_stereo_node" name="sxs_stereo">
-		</node>
-		<include file="./proc.launch" />
-	</group>
-	<arg name="pi/2" value="1.5707963267948966" />
-    <arg name="optical_rotate" value="0 0 0 -$(arg pi/2) 0 -$(arg pi/2)" />
-    <node pkg="tf" type="static_transform_publisher" name="camera_base_link"
-        args="$(arg optical_rotate) base_link camera_link 100" /> 
+	<include file="./setup.launch" />
+	<include file="./rtabmap.launch" />
 </launch>

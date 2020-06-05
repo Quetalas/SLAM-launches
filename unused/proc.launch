@@ -7,7 +7,7 @@
         <remap from="right/camera_info" to="/my_stereo/right/camera_info"/>
 
         <param name="approximate_sync" value="true"/>
-		<param name="queue_size" value="30"/>
+		<param name="queue_size" value="2"/>
 		<param name="frame_id" value="camera_link"/>
 
     </node>

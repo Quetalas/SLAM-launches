@@ -1,0 +1,9 @@
+<launch>
+	<include file="./cameraOn.launch" />
+	
+	<group ns="sxs_stereo">
+
+		<node  pkg="side_x_side_stereo" type="side_x_side_stereo_node" name="sxs_node">
+		</node>
+	</group>
+</launch>
